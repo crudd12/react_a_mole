@@ -1,13 +1,12 @@
 import { useEffect } from "react"
 import molehill from '../Images/molehill.png'
 
-// how could I have used a variable to pass in rather than props for the toggle?
-function EmptySlot(props) {
+function EmptySlot({ toggle }) {
 
     useEffect(() => {
         let randSeconds = Math.ceil(Math.random() * 5000)
         let timer = setTimeout(() => {
-            props.toggle(true)
+            toggle(true)
         }, randSeconds)
         return () => clearTimeout(timer)
     })

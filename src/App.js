@@ -8,7 +8,7 @@ function App() {
   const createMoleHill = () => {
     let hills = []
     for (let i = 0; i < 9; i++) {
-      hills.push(<MoleContainer setScore={setScore} score={score} />
+      hills.push(<MoleContainer key={i} setScore={setScore} score={score} />
       )
     }
     return (
